@@ -390,5 +390,5 @@ update_sample_sheet_f.close()
 
 #delete the original samplesheet, mv the updated sample sheet here.
 shutil.move(update_sample_sheet_file,ori_sample_sheet_file)
-send_report='mailx -A ./Data/Intensities/BaseCalls/predem_%snt_%snt_%s-mismatch/Update_sample_sheet_dict.txt -A ./Data/Intensities/BaseCalls/predem_%snt_%snt_%s-mismatch/SampleSheet_tmp.csv -s %s_predem_%snt_%snt_%s-mismatch-update si.chen@admerahealth.com shuang.wu@admerahealth.com </dev/null' %(index1,index2,mismatch_info,index1,index2,mismatch_info,run_id,index1,index2,mismatch_info)
+send_report='mailx -A ./Data/Intensities/BaseCalls/predem_%snt_%snt_%s-mismatch/Update_sample_sheet_dict.txt -A ./Data/Intensities/BaseCalls/predem_%snt_%snt_%s-mismatch/SampleSheet_tmp.csv -s %s_predem_%snt_%snt_%s-mismatch-update si.chen@admerahealth.com shuang.wu@admerahealth.com li.mengxiang@admerahealth.com </dev/null' %(index1,index2,mismatch_info,index1,index2,mismatch_info,run_id,index1,index2,mismatch_info)
 subprocess.check_call(send_report,shell=True)

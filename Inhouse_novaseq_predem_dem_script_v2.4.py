@@ -86,7 +86,7 @@ def nova_predem():
             except:
                 error_happened=True
                 continue
-            send_report='mailx -A Data/Intensities/BaseCalls/predem_{}nt_{}nt_{}-mismatch/Reports/html/*{}/all/all/all/laneBarcode.html $(printf -- "-A %s " Data/Intensities/BaseCalls/predem_{}nt_{}nt_{}-mismatch/Stats/DemuxSummary*.txt) -s {}_predem_{}nt_{}nt_{}-mismatch si.chen@admerahealth.com  shuang.wu@admerahealth.com</dev/null'.format(index1,index2,mismatch_info,flowcell_ID,index1,index2,mismatch_info,run_name,index1,index2,mismatch_info)
+            send_report='mailx -A Data/Intensities/BaseCalls/predem_{}nt_{}nt_{}-mismatch/Reports/html/*{}/all/all/all/laneBarcode.html $(printf -- "-A %s " Data/Intensities/BaseCalls/predem_{}nt_{}nt_{}-mismatch/Stats/DemuxSummary*.txt) -s {}_predem_{}nt_{}nt_{}-mismatch si.chen@admerahealth.com  shuang.wu@admerahealth.com li.mengxiang@admerahealth.com</dev/null'.format(index1,index2,mismatch_info,flowcell_ID,index1,index2,mismatch_info,run_name,index1,index2,mismatch_info)
             subprocess.check_call(send_report,shell=True)
             print (send_report)
 
@@ -195,7 +195,7 @@ def nova_dem():
                 error_happened=True
                 continue
 
-            send_report='mailx -A /mnt/novaoutput2/DeliverTeam_Output/6-Dmx-Fastq/{}/Reports/html/*{}/all/all/all/laneBarcode.html $(printf -- "-A %s " /mnt//mnt/novaoutput2/DeliverTeam_Output/6-Dmx-Fastq2/DeliverTeam_Output/6-Dmx-Fastq/{}/Stats/DemuxSummary*.txt) -s {}_demultiplex_result si.chen@admerahealth.com shuang.wu@admerahealth.com jingling.hou@admerahealth.com yaping.feng@admerahealth.com kevin.sun@admerahealth.com haixin.shu@admerahealth.com yaoqi.li@admerahealth.com</dev/null'.format(sample_sheet_name,flowcell_ID,sample_sheet_name,sample_sheet_name)
+            send_report='mailx -A /mnt/novaoutput2/DeliverTeam_Output/6-Dmx-Fastq/{}/Reports/html/*{}/all/all/all/laneBarcode.html $(printf -- "-A %s " /mnt/novaoutput2/DeliverTeam_Output/6-Dmx-Fastq/{}/Stats/DemuxSummary*.txt) -s {}_demultiplex_result si.chen@admerahealth.com shuang.wu@admerahealth.com jingling.hou@admerahealth.com yaping.feng@admerahealth.com kevin.sun@admerahealth.com haixin.shu@admerahealth.com yaoqi.li@admerahealth.com li.mengxiang@admerahealth.com</dev/null'.format(sample_sheet_name,flowcell_ID,sample_sheet_name,sample_sheet_name)
             subprocess.check_call(send_report,shell=True)
             print (send_report)
 
